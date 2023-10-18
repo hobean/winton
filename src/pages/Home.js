@@ -8,13 +8,10 @@ const Home = () => {
   return (
     <DefaultLayout>
       <Project></Project>
-
-      <div>
-        <img alt="wintonlogo" src="img/winton.png"></img>
-      </div>
+      <Carousel data={competition}></Carousel>
+      <img alt="wintonlogo" src="img/winton.png"></img>
       <Title title="지역별 대회"></Title>
       <Tabbs city={city}></Tabbs>
-      {/* <Carousel data={competition}></Carousel> */}
     </DefaultLayout>
   );
 };
