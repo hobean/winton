@@ -17,8 +17,8 @@ const Carousel = (props) => {
       })} */}
       <button onClick={() => { setCurrentIdx(currentIdx - 1); }}>뒤로</button>
       {/* <img src={testImgs[currentIdx].src} width="200px" height="200px" ></img> */}
-      <div style={{ display: "flex", }}>
-        <div style={{ display: "flex", objectFit: "contain", overflow: "hidden", width: "200px", height: "200px", }}>
+      <div style={{ display: "flex", overflow: "hidden", width: "200px", height: "200px", }}>
+        <div style={{ display: "flex", objectFit: "contain", transform: "translateX(-100 %)", }}>
           {testImgs.map((testImg, index) => (
             <img src={testImg.src} key={index} width="200px" height="200px"></img>
           ))}
