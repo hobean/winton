@@ -7,7 +7,6 @@ const Carousel = (props) => {
     { src: "https://img.freepik.com/premium-vector/modern-passionate-badminton-player-in-action-logo_293731-95.jpg" },
     { src: "https://png.pngtree.com/element_pic/17/03/03/b8ef40a996638082467a3e5a2e8c19de.jpg" },
     { src: "https://img.hani.co.kr/imgdb/resize/2017/0420/00500016_20170420.JPG" },
-    { src: "https://png.pngtree.com/element_pic/17/03/03/b8ef40a996638082467a3e5a2e8c19de.jpg" },
   ]
 
   return (
