@@ -14,14 +14,7 @@ const Carousel = (props) => {
   const lastImg = testImgs[0];
   const newImgs = [firstImg, ...testImgs, lastImg];
 
-
-
-  // useEffect(() => {
-  //   console.log("currentIdx");
-  // }, [currentIdx]);
-
   if (currentIdx === newImgs.length - 1) {
-    setOffTransition(true);
     setCurrentIdx(0);
   }
   console.log({ currentIdx });
