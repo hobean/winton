@@ -1,9 +1,10 @@
 // import { transition } from "@chakra-ui/react";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 const Carousel = (props) => {
-  const [currentIdx, setCurrentIdx] = useState(0);
+  const [currentIdx, setCurrentIdx] = useState(1);
   const [OffTransition, setOffTransition] = useState(false);
+
   const testImgs = [
     { src: "https://img.freepik.com/premium-vector/modern-passionate-badminton-player-in-action-logo_293731-95.jpg" },
     { src: "https://png.pngtree.com/element_pic/17/03/03/b8ef40a996638082467a3e5a2e8c19de.jpg" },
@@ -14,13 +15,14 @@ const Carousel = (props) => {
   const lastImg = testImgs[0];
   const newImgs = [firstImg, ...testImgs, lastImg];
 
-  if (currentIdx === newImgs.length - 1) {
-    setCurrentIdx(0);
-  }
+
   console.log({ currentIdx });
 
 
   const transition = OffTransition ? "0s" : "500ms"
+  if (currentIdx === newImgs.length - 1) {
+    setCurrentIdx(1);
+  }
 
   return (
     <div style={{ display: "flex", justifyContent: "center", }}>
@@ -37,7 +39,6 @@ const Carousel = (props) => {
       <button onClick={() => { setCurrentIdx(currentIdx + 1); }}>앞으로</button>
     </div >
   );
-
 };
 
 
