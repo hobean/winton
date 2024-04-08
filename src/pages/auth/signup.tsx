@@ -32,21 +32,21 @@ export default function AuthSignupPage() {
           <Heading size="md" p="2" textAlign={"center"}>
             회원가입
           </Heading>
-          <FormControl isRequired w="400px" m="3">
-            <FormLabel>Email address</FormLabel>
+          <FormControl isRequired w="400px" m="3" p="3">
+            <FormLabel pt="2">Email address</FormLabel>
             <Input type="email" placeholder="이메일 입력" />
-            <FormLabel>password</FormLabel>
+            <FormLabel pt="2">password</FormLabel>
             <Input
               type="password"
-              placeholder="6~12자 영문/대소문자, 숫자, 특수문자만 조합하여 입력"
+              placeholder="6~12자 영문/대소문자, 숫자, 특수문자만 입력"
             />
-            <FormLabel>이름</FormLabel>
+            <FormLabel pt="2">이름</FormLabel>
             <Input type="text" />
-            <FormLabel>생년월일</FormLabel>
+            <FormLabel pt="2">생년월일</FormLabel>
             <Input type="text" placeholder="19950120" />
-            <FormLabel>휴대폰번호</FormLabel>
+            <FormLabel pt="2">휴대폰번호</FormLabel>
             <Input type="text" placeholder="1023231232" />
-            <FormLabel>소속 시/도</FormLabel>
+            <FormLabel pt="2">소속 시/도</FormLabel>
             <Select placeholder="부산">
               <option>서울</option>
               <option>부산</option>
@@ -65,11 +65,11 @@ export default function AuthSignupPage() {
               <option>경남</option>
               <option>제주</option>
             </Select>
-            <FormLabel>소속 클럽</FormLabel>
+            <FormLabel pt="2">소속 클럽</FormLabel>
             <Input type="text" placeholder="이지스클럽" />
           </FormControl>
           <Center>
-            <Button p="3" w="50%" size="md" colorScheme="blackAlpha">
+            <Button w="50%" size="md" colorScheme="blackAlpha">
               Create a account
             </Button>
           </Center>
