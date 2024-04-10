@@ -1,5 +1,5 @@
 import { DefaultLayout } from "@/components";
-import { Button } from "@chakra-ui/react";
+import { Button, Box, Heading, Flex, Input } from "@chakra-ui/react";
 import Head from "next/head";
 import { signIn, signOut } from "next-auth/react";
 
@@ -13,22 +13,37 @@ export default function AuthSigninPage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <DefaultLayout>
-        <Button
-          colorScheme="blackAlpha"
-          onClick={() => {
-            signIn();
-          }}
-        >
-          Github Login
-        </Button>
-        <Button
-          colorScheme="blackAlpha"
-          onClick={() => {
-            signOut();
-          }}
-        >
-          Github Logout
-        </Button>
+        <Flex direction="column">
+          <Box>
+            <Heading size="md" p="2" textAlign={"center"}>
+              로그인
+            </Heading>
+            <Input type="email" m="2" placeholder="이메일 입력" />
+            <Input
+              type="password"
+              m="2"
+              placeholder="6~12자 영문/대소문자, 숫자, 특수문자만 입력"
+            />
+          </Box>
+          <Button
+            colorScheme="blackAlpha"
+            m="2"
+            onClick={() => {
+              signIn();
+            }}
+          >
+            Github Login
+          </Button>
+          <Button
+            colorScheme="blackAlpha"
+            m="2"
+            onClick={() => {
+              signOut();
+            }}
+          >
+            Github Logout
+          </Button>
+        </Flex>
       </DefaultLayout>
     </>
   );
