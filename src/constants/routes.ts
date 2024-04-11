@@ -18,8 +18,8 @@ export enum PageRoutes {
 }
 
 export const menu = [
-  { label: "대회 목록", url: toUrl(PageRoutes.CompetitionList) },
-  { label: "선수 목록", url: toUrl(PageRoutes.PlayerList) },
-  { label: "레슨 목록", url: toUrl(PageRoutes.LessonList) },
-  { label: "클럽 목록", url: toUrl(PageRoutes.ClubList) },
+  { label: "대회 정보", url: toUrl(PageRoutes.CompetitionList) },
+  { label: "선수 정보", url: toUrl(PageRoutes.PlayerList) },
+  { label: "레슨 정보", url: toUrl(PageRoutes.LessonList) },
+  { label: "클럽 정보", url: toUrl(PageRoutes.ClubList) },
 ];

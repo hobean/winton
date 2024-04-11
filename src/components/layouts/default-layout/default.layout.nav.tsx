@@ -7,7 +7,9 @@ const DefaultLayoutNav = () => {
     <Stack as={"ul"} direction={"row"}>
       {menu.map((item) => (
         <Link key={item.label} href={item.url}>
-          <Text fontSize={"md"}>{item.label}</Text>
+          <Text mx={10} fontSize={"lg"}>
+            {item.label}
+          </Text>
         </Link>
       ))}
     </Stack>
