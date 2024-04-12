@@ -15,7 +15,7 @@ const DefaultLayout = ({ children }: DefaultLayoutProps) => {
   return (
     <Flex direction={"column"} className={notoSansKr.className}>
       <DefaultLayoutHeader />
-      <Center as={"main"} p={"8"}>
+      <Center as={"main"} p={"16"}>
         {children}
       </Center>
       <DefaultLayoutFooter />

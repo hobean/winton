@@ -1,22 +1,17 @@
 import { DefaultLayout } from "@/components";
 import { useState } from "react";
 import Head from "next/head";
+import React from "react";
 import {
   Center,
-  Text,
-  Box,
   Flex,
   Input,
   FormControl,
   FormLabel,
-  FormErrorMessage,
-  FormHelperText,
   Select,
   Button,
   Heading,
 } from "@chakra-ui/react";
-import React from "react";
-import next from "next";
 
 export default function AuthSignupPage() {
   return (

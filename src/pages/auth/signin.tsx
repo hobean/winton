@@ -1,7 +1,17 @@
 import { DefaultLayout } from "@/components";
-import { Button, Box, Heading, Flex, Input } from "@chakra-ui/react";
+import {
+  Button,
+  Box,
+  Heading,
+  Flex,
+  Input,
+  Divider,
+  AbsoluteCenter,
+} from "@chakra-ui/react";
 import Head from "next/head";
 import { signIn, signOut } from "next-auth/react";
+import Link from "next/link";
+import SocialLogin from "./socialLogin";
 
 export default function AuthSigninPage() {
   return (
@@ -13,21 +23,33 @@ export default function AuthSigninPage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <DefaultLayout>
-        <Flex direction="column">
-          <Box>
-            <Heading size="md" p="2" textAlign={"center"}>
-              로그인
-            </Heading>
-            <Input type="email" m="2" placeholder="이메일 입력" />
-            <Input
-              type="password"
-              m="2"
-              placeholder="6~12자 영문/대소문자, 숫자, 특수문자만 입력"
-            />
-          </Box>
-          <Button
-            colorScheme="blackAlpha"
-            m="2"
+        <Flex direction="column" width="xs">
+          <Heading size="md" p="2" textAlign={"center"}>
+            로그인
+          </Heading>
+          <Input mt="2" type="email" placeholder="이메일 입력" />
+          <Input
+            type="password"
+            mt="2"
+            placeholder="6~12자 영문/대소문자, 숫자, 특수문자만 입력"
+          />
+          <Button colorScheme="blackAlpha" width="xs" mt="2">
+            로그인
+          </Button>
+          <Button colorScheme="blackAlpha" width="xs" mt="2">
+            회원가입
+          </Button>
+          <Flex mt="2" justifyContent="flex-end" fontSize="xs">
+            <Link href="">아이디 찾기</Link>
+            <p>|</p>
+            <Link href="">비밀번호 찾기</Link>
+          </Flex>
+          <SocialLogin></SocialLogin>
+
+          {/* <Button
+            colorScheme="teal"
+            mt="2"
+            width="xs"
             onClick={() => {
               signIn();
             }}
@@ -35,14 +57,35 @@ export default function AuthSigninPage() {
             Github Login
           </Button>
           <Button
+            colorScheme="green"
+            mt="2"
+            width="xs"
+            onClick={() => {
+              signIn();
+            }}
+          >
+            Naver Login
+          </Button>
+          <Button
+            colorScheme="yellow"
+            mt="2"
+            width="xs"
+            onClick={() => {
+              signOut();
+            }}
+          >
+            Kakao Login
+          </Button>
+          <Button
             colorScheme="blackAlpha"
-            m="2"
+            mt="2"
+            width="xs"
             onClick={() => {
               signOut();
             }}
           >
             Github Logout
-          </Button>
+          </Button> */}
         </Flex>
       </DefaultLayout>
     </>
