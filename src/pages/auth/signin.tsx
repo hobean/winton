@@ -45,47 +45,6 @@ export default function AuthSigninPage() {
             <Link href="">비밀번호 찾기</Link>
           </Flex>
           <SocialLogin></SocialLogin>
-
-          {/* <Button
-            colorScheme="teal"
-            mt="2"
-            width="xs"
-            onClick={() => {
-              signIn();
-            }}
-          >
-            Github Login
-          </Button>
-          <Button
-            colorScheme="green"
-            mt="2"
-            width="xs"
-            onClick={() => {
-              signIn();
-            }}
-          >
-            Naver Login
-          </Button>
-          <Button
-            colorScheme="yellow"
-            mt="2"
-            width="xs"
-            onClick={() => {
-              signOut();
-            }}
-          >
-            Kakao Login
-          </Button>
-          <Button
-            colorScheme="blackAlpha"
-            mt="2"
-            width="xs"
-            onClick={() => {
-              signOut();
-            }}
-          >
-            Github Logout
-          </Button> */}
         </Flex>
       </DefaultLayout>
     </>
