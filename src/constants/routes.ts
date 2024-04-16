@@ -6,7 +6,7 @@ export enum PageRoutes {
   Home = "/",
   Signin = "/auth/signin",
   Signup = "/auth/signup",
-  CompetitionList = "/competition/list",
+  CompetitionList = "/competition/entireList",
   CompetitionRegister = "/competition/register",
   CompetitionDetail = "/competition/:id?",
   LessonList = "/lesson/list",

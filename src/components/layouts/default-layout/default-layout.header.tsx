@@ -4,8 +4,8 @@ import Link from "next/link";
 
 const DefaultLayoutHeader = () => {
   return (
-    <Flex flexDirection={"column"} bgColor={"gray.200"} p={"5"}>
-      <Flex flexDirection={"row"}>
+    <Flex flexDirection="column" bgColor="gray.200" p="5">
+      <Flex flexDirection="row">
         <Link href="/">
           <Heading>Winton</Heading>
         </Link>
@@ -15,10 +15,14 @@ const DefaultLayoutHeader = () => {
         </Center>
         <Spacer />
         <Link href="/auth/signin">
-          <Button colorScheme="blackAlpha">로그인</Button>
+          <Button size="sm" mr="2" colorScheme="blackAlpha">
+            로그인
+          </Button>
         </Link>
         <Link href="/auth/signup">
-          <Button colorScheme="blackAlpha">회원가입</Button>
+          <Button text-algign="center" size="sm" colorScheme="blackAlpha">
+            회원가입
+          </Button>
         </Link>
       </Flex>
     </Flex>

@@ -2,6 +2,7 @@ import { DefaultLayout } from "@/components";
 import {
   Button,
   Box,
+  Text,
   Heading,
   Flex,
   Input,
@@ -41,10 +42,52 @@ export default function AuthSigninPage() {
           </Button>
           <Flex mt="2" justifyContent="flex-end" fontSize="xs">
             <Link href="">아이디 찾기</Link>
-            <p>|</p>
+            <Text ml="1" mr="2">
+              |
+            </Text>
             <Link href="">비밀번호 찾기</Link>
           </Flex>
           <SocialLogin></SocialLogin>
+          <Button
+            colorScheme="teal"
+            mt="2"
+            width="xs"
+            onClick={() => {
+              signIn();
+            }}
+          >
+            Github Login
+          </Button>
+          <Button
+            colorScheme="green"
+            mt="2"
+            width="xs"
+            onClick={() => {
+              signIn();
+            }}
+          >
+            Naver Login
+          </Button>
+          <Button
+            colorScheme="yellow"
+            mt="2"
+            width="xs"
+            onClick={() => {
+              signOut();
+            }}
+          >
+            Kakao Login
+          </Button>
+          <Button
+            colorScheme="blackAlpha"
+            mt="2"
+            width="xs"
+            onClick={() => {
+              signOut();
+            }}
+          >
+            Github Logout
+          </Button>
         </Flex>
       </DefaultLayout>
     </>
