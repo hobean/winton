@@ -1,11 +1,15 @@
-import { Button, Center, Heading, Flex, Spacer } from "@chakra-ui/react";
-import DefaultLayoutNav from "./default.layout.nav";
+import { ColorModeToggler } from "@/components";
+import { Button, Center, Flex, Heading, Spacer } from "@chakra-ui/react";
 import Link from "next/link";
+import DefaultLayoutNav from "./default.layout.nav";
+import { useAlpha } from "@/hooks";
 
 const DefaultLayoutHeader = () => {
+  const { alpha } = useAlpha();
+
   return (
-    <Flex flexDirection="column" bgColor="gray.200" p="5">
-      <Flex flexDirection="row">
+    <Flex direction="column" bgColor={alpha(50)} p="5" align={"center"}>
+      <Flex direction="row" w={"container.lg"}>
         <Link href="/">
           <Heading>Winton</Heading>
         </Link>
@@ -14,16 +18,19 @@ const DefaultLayoutHeader = () => {
           <DefaultLayoutNav />
         </Center>
         <Spacer />
-        <Link href="/auth/signin">
-          <Button size="sm" mr="2" colorScheme="blackAlpha">
-            로그인
-          </Button>
-        </Link>
-        <Link href="/auth/signup">
-          <Button text-algign="center" size="sm" colorScheme="blackAlpha">
-            회원가입
-          </Button>
-        </Link>
+        <Flex gap={"4"}>
+          <Link href="/auth/signin">
+            <Button size="sm" mr="2">
+              로그인
+            </Button>
+          </Link>
+          <Link href="/auth/signup">
+            <Button text-algign="center" size="sm">
+              회원가입
+            </Button>
+          </Link>
+          <ColorModeToggler />
+        </Flex>
       </Flex>
     </Flex>
   );

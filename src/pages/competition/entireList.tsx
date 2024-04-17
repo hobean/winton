@@ -1,21 +1,11 @@
-import { DefaultLayout } from "@/components";
-import {
-  Flex,
-  Tabs,
-  TabList,
-  Tab,
-  TabPanels,
-  TabPanel,
-  Text,
-  Divider,
-} from "@chakra-ui/react";
+import { ContentContainer, DefaultLayout } from "@/components";
+import { Divider, Flex, Tab, TabList, Tabs, Text } from "@chakra-ui/react";
 import Head from "next/head";
-import CompetitionTab from "./tab";
 import Title from "../../components/layouts/default-layout/title";
 import Calendar from "./calendar";
+import CompetitionTab from "./tab";
 
 export default function CompetitionList() {
-  const title = "전체 대회일정";
   return (
     <>
       <Head>
@@ -25,24 +15,26 @@ export default function CompetitionList() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <DefaultLayout>
-        <Flex direction={"column"} alignItems={"center"} gap={"3"}>
-          <Title title={title}></Title>
-          <Tabs>
-            <TabList>
-              <Tab fontSize={"xl"} mr={"4"}>
-                주간일정
-              </Tab>
-              <Tab fontSize={"xl"}>월간일정</Tab>
-              <Tab fontSize={"xl"} ml={"4"}>
-                연간일정
-              </Tab>
-            </TabList>
-          </Tabs>
-          <Calendar></Calendar>
-          <CompetitionTab></CompetitionTab>
-          <Text fontSize={"md"}>Total 00건</Text>
-          <Divider />
-        </Flex>
+        <ContentContainer>
+          <Flex direction={"column"} alignItems={"center"} gap={"3"}>
+            <Title title={"전체 대회일정"} />
+            <Tabs>
+              <TabList>
+                <Tab fontSize={"xl"} mr={"4"}>
+                  주간일정
+                </Tab>
+                <Tab fontSize={"xl"}>월간일정</Tab>
+                <Tab fontSize={"xl"} ml={"4"}>
+                  연간일정
+                </Tab>
+              </TabList>
+            </Tabs>
+            <Calendar />
+            <CompetitionTab />
+            <Text fontSize={"md"}>Total 00건</Text>
+            <Divider />
+          </Flex>
+        </ContentContainer>
       </DefaultLayout>
     </>
   );

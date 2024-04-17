@@ -13,6 +13,7 @@ import Head from "next/head";
 import { signIn, signOut } from "next-auth/react";
 import Link from "next/link";
 import SocialLogin from "./socialLogin";
+import ContentContainer from "../../components/common/content-container/content-container";
 
 export default function AuthSigninPage() {
   return (
@@ -24,71 +25,73 @@ export default function AuthSigninPage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <DefaultLayout>
-        <Flex direction="column" width="xs">
-          <Heading size="md" p="2" textAlign={"center"}>
-            로그인
-          </Heading>
-          <Input mt="2" type="email" placeholder="이메일 입력" />
-          <Input
-            type="password"
-            mt="2"
-            placeholder="6~12자 영문/대소문자, 숫자, 특수문자만 입력"
-          />
-          <Button colorScheme="blackAlpha" width="xs" mt="2">
-            로그인
-          </Button>
-          <Button colorScheme="blackAlpha" width="xs" mt="2">
-            회원가입
-          </Button>
-          <Flex mt="2" justifyContent="flex-end" fontSize="xs">
-            <Link href="">아이디 찾기</Link>
-            <Text ml="1" mr="2">
-              |
-            </Text>
-            <Link href="">비밀번호 찾기</Link>
+        <ContentContainer>
+          <Flex direction="column" width="xs">
+            <Heading size="md" p="2" textAlign={"center"}>
+              로그인
+            </Heading>
+            <Input mt="2" type="email" placeholder="이메일 입력" />
+            <Input
+              type="password"
+              mt="2"
+              placeholder="6~12자 영문/대소문자, 숫자, 특수문자만 입력"
+            />
+            <Button colorScheme="blackAlpha" width="xs" mt="2">
+              로그인
+            </Button>
+            <Button colorScheme="blackAlpha" width="xs" mt="2">
+              회원가입
+            </Button>
+            <Flex mt="2" justifyContent="flex-end" fontSize="xs">
+              <Link href="">아이디 찾기</Link>
+              <Text ml="1" mr="2">
+                |
+              </Text>
+              <Link href="">비밀번호 찾기</Link>
+            </Flex>
+            <SocialLogin></SocialLogin>
+            <Button
+              colorScheme="teal"
+              mt="2"
+              width="xs"
+              onClick={() => {
+                signIn();
+              }}
+            >
+              Github Login
+            </Button>
+            <Button
+              colorScheme="green"
+              mt="2"
+              width="xs"
+              onClick={() => {
+                signIn();
+              }}
+            >
+              Naver Login
+            </Button>
+            <Button
+              colorScheme="yellow"
+              mt="2"
+              width="xs"
+              onClick={() => {
+                signOut();
+              }}
+            >
+              Kakao Login
+            </Button>
+            <Button
+              colorScheme="blackAlpha"
+              mt="2"
+              width="xs"
+              onClick={() => {
+                signOut();
+              }}
+            >
+              Github Logout
+            </Button>
           </Flex>
-          <SocialLogin></SocialLogin>
-          <Button
-            colorScheme="teal"
-            mt="2"
-            width="xs"
-            onClick={() => {
-              signIn();
-            }}
-          >
-            Github Login
-          </Button>
-          <Button
-            colorScheme="green"
-            mt="2"
-            width="xs"
-            onClick={() => {
-              signIn();
-            }}
-          >
-            Naver Login
-          </Button>
-          <Button
-            colorScheme="yellow"
-            mt="2"
-            width="xs"
-            onClick={() => {
-              signOut();
-            }}
-          >
-            Kakao Login
-          </Button>
-          <Button
-            colorScheme="blackAlpha"
-            mt="2"
-            width="xs"
-            onClick={() => {
-              signOut();
-            }}
-          >
-            Github Logout
-          </Button>
-        </Flex>
+        </ContentContainer>
       </DefaultLayout>
     </>
   );

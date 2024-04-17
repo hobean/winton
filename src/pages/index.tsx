@@ -1,5 +1,5 @@
-import { DefaultLayout } from "@/components";
-import { Center, Image } from "@chakra-ui/react";
+import { ContentContainer, DefaultLayout } from "@/components";
+import { Image } from "@chakra-ui/react";
 import Head from "next/head";
 
 export default function HomePage() {
@@ -12,7 +12,9 @@ export default function HomePage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <DefaultLayout>
-        <Image objectFit="cover" src="/winton.png" alt="없음" />
+        <ContentContainer>
+          <Image objectFit="cover" src="/winton.png" alt="없음" />
+        </ContentContainer>
       </DefaultLayout>
     </>
   );

@@ -12,6 +12,7 @@ import {
   Button,
   Heading,
 } from "@chakra-ui/react";
+import ContentContainer from "../../components/common/content-container/content-container";
 
 export default function AuthSignupPage() {
   return (
@@ -23,52 +24,54 @@ export default function AuthSignupPage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <DefaultLayout>
-        <Flex direction="column" borderWidth={2} borderColor="grey.100" p={3}>
-          <Heading size="md" p="2" textAlign={"center"}>
-            회원가입
-          </Heading>
-          <FormControl isRequired w="400px" m="3" p="3">
-            <FormLabel pt="2">Email address</FormLabel>
-            <Input type="email" placeholder="이메일 입력" />
-            <FormLabel pt="2">password</FormLabel>
-            <Input
-              type="password"
-              placeholder="6~12자 영문/대소문자, 숫자, 특수문자만 입력"
-            />
-            <FormLabel pt="2">이름</FormLabel>
-            <Input type="text" />
-            <FormLabel pt="2">생년월일</FormLabel>
-            <Input type="text" placeholder="19950120" />
-            <FormLabel pt="2">휴대폰번호</FormLabel>
-            <Input type="text" placeholder="1023231232" />
-            <FormLabel pt="2">소속 시/도</FormLabel>
-            <Select placeholder="부산">
-              <option>서울</option>
-              <option>부산</option>
-              <option>대구</option>
-              <option>인천</option>
-              <option>광주</option>
-              <option>대전</option>
-              <option>울산</option>
-              <option>세종</option>
-              <option>경기</option>
-              <option>강원</option>
-              <option>충북</option>
-              <option>전북</option>
-              <option>전남</option>
-              <option>경북</option>
-              <option>경남</option>
-              <option>제주</option>
-            </Select>
-            <FormLabel pt="2">소속 클럽</FormLabel>
-            <Input type="text" placeholder="이지스클럽" />
-          </FormControl>
-          <Center>
-            <Button w="50%" size="md" colorScheme="blackAlpha">
-              Create a account
-            </Button>
-          </Center>
-        </Flex>
+        <ContentContainer>
+          <Flex direction="column" borderWidth={2} borderColor="grey.100" p={3}>
+            <Heading size="md" p="2" textAlign={"center"}>
+              회원가입
+            </Heading>
+            <FormControl isRequired w="400px" m="3" p="3">
+              <FormLabel pt="2">Email address</FormLabel>
+              <Input type="email" placeholder="이메일 입력" />
+              <FormLabel pt="2">password</FormLabel>
+              <Input
+                type="password"
+                placeholder="6~12자 영문/대소문자, 숫자, 특수문자만 입력"
+              />
+              <FormLabel pt="2">이름</FormLabel>
+              <Input type="text" />
+              <FormLabel pt="2">생년월일</FormLabel>
+              <Input type="text" placeholder="19950120" />
+              <FormLabel pt="2">휴대폰번호</FormLabel>
+              <Input type="text" placeholder="1023231232" />
+              <FormLabel pt="2">소속 시/도</FormLabel>
+              <Select placeholder="부산">
+                <option>서울</option>
+                <option>부산</option>
+                <option>대구</option>
+                <option>인천</option>
+                <option>광주</option>
+                <option>대전</option>
+                <option>울산</option>
+                <option>세종</option>
+                <option>경기</option>
+                <option>강원</option>
+                <option>충북</option>
+                <option>전북</option>
+                <option>전남</option>
+                <option>경북</option>
+                <option>경남</option>
+                <option>제주</option>
+              </Select>
+              <FormLabel pt="2">소속 클럽</FormLabel>
+              <Input type="text" placeholder="이지스클럽" />
+            </FormControl>
+            <Center>
+              <Button w="50%" size="md" colorScheme="blackAlpha">
+                Create a account
+              </Button>
+            </Center>
+          </Flex>
+        </ContentContainer>
       </DefaultLayout>
     </>
   );
